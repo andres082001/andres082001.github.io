@@ -1,0 +1,240 @@
+/* General */
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #f0f8ff; /* Azul claro */
+    color: #040775; /* Gris oscuro para contraste */
+    scroll-behavior: smooth; /* Suaviza el desplazamiento */
+  }
+  
+  .container {
+    width: 90%;
+    max-width: 120000000px;
+    margin: 0 auto;
+  }
+  
+  /* Header */
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #caf0f8;
+    padding: 10px 20px;
+    color: #040775;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  header .logo {
+    margin-left: 0;
+    padding-left: 0;
+}
+  
+  header .logo img {
+    height: 100px;
+  }
+  
+  .social-media a {
+    margin-left: 10px;
+  }
+  
+  .social-media img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s;
+  }
+  
+  .social-media img:hover {
+    transform: scale(1.2);
+  }
+  
+  /* Hero Section */
+  .hero {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    animation: backgroundSlideshow 15s infinite; /* Cambia cada 15 segundos */
+    position: relative;
+    overflow: hidden;
+}
+
+@keyframes backgroundSlideshow {
+    0% { background-image: url('Imagenes/fondo\ 10.jpg'); }  /* Imagen 1 */
+    33% { background-image: url('Imagenes/fondo\ 11.jpg'); } /* Imagen 2 */
+    66% { background-image: url('Imagenes/fondo\ 12.jpg'); } /* Imagen 3 */
+    100% { background-image: url('Imagenes/fondo\ 13.jpg'); } /* Vuelve a la imagen 1 */
+}
+  
+  .hero-content {
+    background-color: rgb(120 151 215 / 26%);
+    padding: 20px;
+    border-radius: 10px;
+    animation: fadeIn 2s ease-in-out;
+  }    
+  
+  /* Servicios */
+  .services {
+    padding: 50px 0;
+    background-color: #99dfff;
+  }
+  
+  .services h3 {
+    text-align: center;
+    color: #040775;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  
+  .service-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+  }
+  
+  .service-item {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s;
+  }
+  
+  .service-item:hover {
+    transform: scale(1.05);
+  }
+  
+  .service-item img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+  }
+  
+  /* Galería */
+  .gallery {
+    padding: 50px 0;
+    background-color: #B3E5FC;
+  }
+  
+  .gallery h3 {
+    text-align: center;
+    color: #040775;
+    margin-bottom: 30px;
+  }
+  
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+  }
+  
+  .gallery img {
+    width: 100%;
+    height: 200px;        /* Establece una altura uniforme para todas las imágenes */
+    object-fit: cover;    /* Ajusta las imágenes para que se recorten y no se deformen */
+    border-radius: 10px;
+  }
+  
+  /* Tarifas */
+  .pricing {
+    padding: 50px 0;
+    background-color: #caf0f8;
+  }
+  
+  .pricing h3 {
+    text-align: center;
+    color: #040775;
+    margin-bottom: 30px;
+  }
+  
+  .pricing-table {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+  }
+  
+  .price-item {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .price-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0.2;
+    z-index: -1;
+  }
+  
+  .price-item:nth-child(1)::before { background-image: url('imagenes/masaje.jpg'); }
+  .price-item:nth-child(2)::before { background-image: url('imagenes/facial.jpg'); }
+  .price-item:nth-child(3)::before { background-image: url('imagenes/descontracturante.jpg'); }
+  .price-item:nth-child(4)::before { background-image: url('imagenes/deportivo.jpg'); }
+  .price-item:nth-child(5)::before { background-image: url('imagenes/drenaje.jpg'); }
+  .price-item:nth-child(6)::before { background-image: url('imagenes/final.jpg'); }
+  
+  .price-item:hover {
+    transform: translateY(-10px);
+    transition: transform 0.3s;
+  }
+  
+  /* Contacto */
+  .contact {
+    padding: 50px 0;
+    background-color: #f0f8ff;
+  }
+  
+  .contact h3 {
+    text-align: center;
+    color: #040775;
+    margin-bottom: 20px;
+  }
+  
+  .contact .social-mediaa a {
+    margin: 0 10px;
+  }
+  
+  .contact .social-mediaa img {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s;
+  }
+  
+  .contact .social-mediaa img:hover {
+    transform: scale(1.2);
+  }
+  
+  .contacto-foto {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .contacto-foto img {
+    width: 150px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+  }
+  
+  /* Footer */
+  footer {
+    text-align: center;
+    background-color: #0077b6;
+    color: white;
+    padding: 10px 0;
+  }
